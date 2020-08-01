@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --background-primary: #5F7DC9;
+  --background-secondary: #A2B0D2;
+  --logo-color: #475D96;
+  --lower-primary: #393E4A;
+  --lower-secondary: #232E4A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #666666;
+}
