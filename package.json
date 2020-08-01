@@ -10,12 +10,18 @@
     "el:build": "vue-cli-service electron:build",
     "el:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "postuninstall": "electron-builder install-app-deps",
+    "storybook": "start-storybook -p 9001 -c .storybook -s public",
+    "storybook:build": "build-storybook -c .storybook -o .out -s public"
   },
   "main": "background.ts",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
     "@iarna/toml": "^2.2.5",
+    "@storybook/vue": "^5.3.19",
     "autoprefixer": "^9.8.6",
+    "babel-preset-vue": "^2.0.2",
     "core-js": "^3.6.5",
     "postcss-import": "^12.0.1",
     "vue": "^2.6.11",
@@ -26,6 +32,10 @@
     "vuex-class-modules": "^1.1.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.4.0",
@@ -37,6 +47,7 @@
     "@vue/cli-service": "~4.4.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "babel-loader": "^8.1.0",
     "electron": "^9.0.0",
     "electron-devtools-installer": "^3.1.0",
     "eslint": "^6.7.2",
@@ -53,8 +64,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
-      "vue-cli-service lint",
-      "git add"
+      "vue-cli-service lint"
     ]
   }
 }
