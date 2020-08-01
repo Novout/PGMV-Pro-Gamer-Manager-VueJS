@@ -37,6 +37,10 @@ const createWindow = () => {
     win.loadURL("app://./index.html");
   }
 
+  win.setTitle("PGM - Pro Gamer Manager");
+
+  win.setMenuBarVisibility(false);
+
   win.on("closed", () => {
     win = null;
   });

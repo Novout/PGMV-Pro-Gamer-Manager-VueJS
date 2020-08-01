@@ -1,4 +1,3 @@
-// user-module.ts
 import { VuexModule, Module, Mutation } from "vuex-class-modules";
 
 @Module
