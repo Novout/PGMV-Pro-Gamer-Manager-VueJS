@@ -5,7 +5,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 
 const loadStories = () => {
-  require('../src/stories');
+  require('../src/book');
 }
 
 configure(loadStories, module);

@@ -16,6 +16,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "skipLibCheck": true,
     "types": [
       "webpack-env"
     ],
@@ -39,7 +40,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx", "src/stories/index.js", "src/stories/index.js"
+    "tests/**/*.tsx",
+    "src/book/index.js"
   ],
   "exclude": [
     "node_modules",
