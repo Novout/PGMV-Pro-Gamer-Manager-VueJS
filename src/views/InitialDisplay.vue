@@ -3,6 +3,7 @@
     <section>
       <PGMLogo />
       <InitialOptions />
+      <He4rtLogo />
     </section>
   </main>
 </template>
@@ -12,9 +13,11 @@ import { Vue, Component } from "vue-property-decorator";
 // import { ownerModule } from "@/store/modules/owner-module";
 import PGMLogo from "@/components/common/general/PGMLogo.vue";
 import InitialOptions from "@/components/display/initial/InitialOptions.vue";
+import He4rtLogo from "@/components/common/general/He4rtLogo.vue";
 
 @Component({
   components: {
+    He4rtLogo,
     InitialOptions,
     PGMLogo
   }

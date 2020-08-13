@@ -1,6 +1,6 @@
 "use strict";
 
-import { app, protocol, BrowserWindow } from "electron";
+import { app, protocol, BrowserWindow, globalShortcut } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
 const isDevelopment = process.env.NODE_ENV !== "production";
@@ -32,23 +32,34 @@ const createWindow = () => {
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string);
-    if (!process.env.IS_TEST) win.webContents.openDevTools();
   } else {
     createProtocol("app");
     // Load the index.html when not in development
     win.loadURL("app://./index.html");
   }
 
-  win.setTitle("PGM - Pro Gamer Manager");
-
   win.setMenuBarVisibility(false);
 
   win.maximize();
+
+  win.webContents.on('did-finish-load', () => {
+    // @ts-ignore
+    win.setTitle('PGMJ - Pro Gamer Manager VueJS');
+  });
 
   win.on("closed", () => {
     win = null;
   });
 };
+
+const createShortcuts = () => {
+  globalShortcut.register('CmdOrCtrl+D', () => {
+    // @ts-ignore
+    win.webContents.openDevTools();
+  });
+};
+
+app.on('ready', createShortcuts);
 
 // Quit when all windows are closed.
 app.on("window-all-closed", () => {
