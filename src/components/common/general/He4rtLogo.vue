@@ -1,5 +1,5 @@
 <template>
-  <img :src="require('@/assets/common/base/he4rt.svg')" width="10%">
+  <img :src="require('@/assets/common/base/he4rt.svg')" width="10%" />
 </template>
 
 <script>

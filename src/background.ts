@@ -2,12 +2,13 @@
 
 import { app, protocol, BrowserWindow, globalShortcut } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
+// @ts-ignore
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win: BrowserWindow | null;
+let win: BrowserWindow | undefined | null;
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
@@ -42,9 +43,9 @@ const createWindow = () => {
 
   win.maximize();
 
-  win.webContents.on('did-finish-load', () => {
+  win.webContents.on("did-finish-load", () => {
     // @ts-ignore
-    win.setTitle('PGMJ - Pro Gamer Manager VueJS');
+    win.setTitle("PGMJ - Pro Gamer Manager VueJS");
   });
 
   win.on("closed", () => {
@@ -53,13 +54,13 @@ const createWindow = () => {
 };
 
 const createShortcuts = () => {
-  globalShortcut.register('CmdOrCtrl+D', () => {
+  globalShortcut.register("CmdOrCtrl+D", () => {
     // @ts-ignore
     win.webContents.openDevTools();
   });
 };
 
-app.on('ready', createShortcuts);
+app.on("ready", createShortcuts);
 
 // Quit when all windows are closed.
 app.on("window-all-closed", () => {

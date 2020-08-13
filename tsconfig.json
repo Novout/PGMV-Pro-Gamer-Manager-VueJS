@@ -45,9 +45,12 @@
   ],
   "exclude": [
     "node_modules",
-    "src/store/**"
+    "src/store/**",
+    "src/background.ts"
   ],
   "rules": {
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }

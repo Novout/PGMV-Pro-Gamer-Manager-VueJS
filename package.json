@@ -2,6 +2,9 @@
   "name": "pgm",
   "version": "0.1.0",
   "private": true,
+  "author": "Giovane Cardoso",
+  "description": "PGM Game Copy",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

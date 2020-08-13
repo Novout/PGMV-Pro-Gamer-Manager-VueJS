@@ -10,9 +10,12 @@ const routes: Array<RouteConfig> = [
     component: () =>
       import(/* webpackChunkName: "initial" */ "../views/InitialDisplay.vue")
   },
-  { path: '/404', component: () =>
-      import(/* webpackChunkName: "error" */ "../views/Page404.vue") },
-  { path: '*', redirect: '/404' },
+  {
+    path: "/404",
+    component: () =>
+      import(/* webpackChunkName: "error" */ "../views/Page404.vue")
+  },
+  { path: "*", redirect: "/404" }
 ];
 
 const router: VueRouter = new VueRouter({
