@@ -36,7 +36,13 @@ main section {
   display: flex;
   flex-flow: column nowrap;
   place-content: center flex-start;
-  margin: 2vh auto 0;
+  margin: 6vh auto 0;
   width: 400px;
+}
+
+@media only screen and (max-height: 800px) {
+  main section {
+    margin: 2vh auto 0;
+  }
 }
 </style>

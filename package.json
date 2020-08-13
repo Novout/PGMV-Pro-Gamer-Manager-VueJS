@@ -17,7 +17,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook -s public",
     "storybook:build": "build-storybook -c .storybook -o .out -s public"
   },
-  "main": "background.ts",
+  "main": "./dist_electron/index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",

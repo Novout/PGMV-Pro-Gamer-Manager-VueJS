@@ -1,9 +1,12 @@
 import Vue from "vue";
 import App from "./App.vue";
+
 import router from "./router";
 import store from "./store";
-import "./css/main.css";
 import "./plugins/font-awesome";
+
+import "./css/main.css";
+import "./css/preset.css";
 
 Vue.config.productionTip = false;
 

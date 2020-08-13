@@ -11,6 +11,12 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "initial" */ "../views/InitialDisplay.vue")
   },
   {
+    path: "/newgame",
+    name: "NewGameDisplay",
+    component: () =>
+      import(/* webpackChunkName: "newgame" */ "../views/NewGameDisplay.vue")
+  },
+  {
     path: "/404",
     component: () =>
       import(/* webpackChunkName: "error" */ "../views/Page404.vue")

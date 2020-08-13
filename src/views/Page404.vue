@@ -25,9 +25,11 @@ main p {
   font-size: 5rem;
   color: rgba(0, 0, 0, 0.25);
   padding: var(--padding-5) 0;
+  pointer-events: none;
 }
 
 main button {
   padding: var(--padding-1);
+  cursor: pointer;
 }
 </style>
