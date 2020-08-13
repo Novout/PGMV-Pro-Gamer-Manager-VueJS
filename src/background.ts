@@ -19,6 +19,8 @@ const createWindow = () => {
   win = new BrowserWindow({
     width: 800,
     height: 600,
+    minHeight: 600,
+    minWidth: 900,
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
@@ -40,6 +42,8 @@ const createWindow = () => {
   win.setTitle("PGM - Pro Gamer Manager");
 
   win.setMenuBarVisibility(false);
+
+  win.maximize();
 
   win.on("closed", () => {
     win = null;

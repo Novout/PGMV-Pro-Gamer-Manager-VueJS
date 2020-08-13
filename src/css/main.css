@@ -8,11 +8,39 @@
 }
 
 :root {
-  --background-primary: #5F7DC9;
-  --background-secondary: #A2B0D2;
-  --logo-color: #475D96;
-  --lower-primary: #393E4A;
-  --lower-secondary: #232E4A;
-  --text-primary: #FFFFFF;
-  --text-secondary: #666666;
+  --background-primary: #FFFFFF;
+  --background-primary-hover: #EEEEEE;
+  --background-secondary: #333333;
+  --text-primary: #000000;
+  --text-secondary: #444444;
+  --text-tertiary: #FFFFFFF;
+  --border-primary: #000000;
+  --border-secondary: #666666;
+  --radius-default: 24px;
+  --padding-1: 0.5rem;
+  --padding-2: 1rem;
+  --padding-3: 1.5rem;
+  --padding-4: 2rem;
+  --padding-5: 2.5rem;
+  --margin-1: 0.5rem;
+  --margin-2: 1rem;
+  --margin-3: 1.5rem;
+  --margin-4: 2rem;
+  --margin-5: 2.5rem;
+  --svg-option: 36px;
+}
+
+@font-face {
+  font-family: "Raleway Tiny";
+  src: url("../assets/common/fonts/Raleway-Light.ttf") format("truetype"),
+}
+
+@font-face {
+  font-family: "Raleway ExtraBold";
+  src: url("../assets/common/fonts/Raleway-ExtraBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../assets/common/fonts/Poppins-Bold.otf") format("opentype");
 }

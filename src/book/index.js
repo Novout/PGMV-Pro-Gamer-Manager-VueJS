@@ -2,7 +2,7 @@ import { storiesOf } from "@storybook/vue";
 import { action } from "@storybook/addon-actions";
 
 import Button from "./Button.vue";
-import Input from "./input/Input.vue";
+import Input from "./input/PrimaryInput.vue";
 
 const PGMButton = () => ({
   components: { Button },

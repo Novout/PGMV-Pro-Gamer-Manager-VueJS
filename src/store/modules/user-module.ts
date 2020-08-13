@@ -2,7 +2,6 @@ import { VuexModule, Module, Mutation } from "vuex-class-modules";
 
 @Module
 class UserModule extends VuexModule {
-  // state
   firstName = "Foo";
   lastName = "Bar";
 
