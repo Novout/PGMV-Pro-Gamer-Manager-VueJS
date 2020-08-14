@@ -21,7 +21,9 @@ export default class NewGameOptionsItem extends Vue {
   }
 
   public toRouterOption() {
-    settingsModule.setModeGame(this.to === "caracterbuild" ? "proplayer" : "manager");
+    settingsModule.setModeGame(
+      this.to === "caracterbuild" ? "proplayer" : "manager"
+    );
     this.$router.push(`/${this.to}`);
   }
 }

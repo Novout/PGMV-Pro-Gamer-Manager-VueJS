@@ -1,29 +1,73 @@
-# pgm
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/Novout/He4rt-CPP-Tutorial">
+    <img src="src/assets/pgm.png" alt="PGM Logo" width="90%">
+  </a>
+</p>
 
-## Project setup
+## Sobre o Projeto
+
+Produzido com a colaboração de integrantes da **He4rt Developers**, esse tutorial tem como objetivo principal apresentar e ensinar a linguagem de programação C++ de uma maneira fácil, descomplicada e acessível para todos.
+
+### Desenvolvido Com
+
+- [Electron](https://www.electronjs.org/)
+- [VueJS](https://vuejs.org/)
+
+<!-- GETTING STARTED -->
+
+## Iniciando
+
+Para fazer uma cópia e rodar o projeto localmente, siga estes passos.
+
+### Instalação
+
+1. Clone o repositorio
+
+```sh
+git clone https://github.com/Novout/PGMJ-Pro-Gamer-Manager-VueJS.git
 ```
+
+2. Instale as dependências
+
+```sh
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+<!-- USAGE EXAMPLES -->
+
+## Como Usar
+
+Para iniciar o servidor de desenvolvimento utilize o seguinte comando
+
+```sh
+yarn el:serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
+Para realizar a build do projeto execute o seguinte comando
+
+```sh
+yarn el:build
 ```
 
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
+## Como Contribuir
 
-### Lints and fixes files
-```
-yarn lint
-```
+1. Realize um Fork do projeto
+2. Adicione o conteúdo (`git add -A`)
+3. Crie um branch com a nova feature (`git checkout -b feature/featureBraba`)
+4. Realize o Commit (`git commit -m 'adicionando conteudo brabo'`)
+5. Realize o Push no Branch (`git push origin feature/featureBraba`)
+6. Abra um Pull Request
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<!-- LICENSE -->
+
+## Licença
+
+Distribuido sobre a licença `MIT`. Leia o arquivo `LICENSE` para mais informações.
+
+<!-- CONTACT -->
+
+## Contato
+
+Giovane Cardoso - [@NovoutT](https://twitter.com/NovoutT) - novout@hotmail.com

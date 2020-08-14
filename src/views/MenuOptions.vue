@@ -22,7 +22,7 @@
 import { Vue, Component, Watch } from "vue-property-decorator";
 import PrimarySelect from "@/components/common/general/select/PrimarySelect.vue";
 import { settingsOptionService } from "@/services/defines/settings.ts";
-import {BrowserWindow, remote} from "electron";
+import { BrowserWindow, remote } from "electron";
 import SecondaryButton from "@/components/common/general/button/SecondaryButton.vue";
 
 @Component({
