@@ -6,10 +6,6 @@
   </a>
 </p>
 
-## Sobre o Projeto
-
-Produzido com a colaboração de integrantes da **He4rt Developers**, esse tutorial tem como objetivo principal apresentar e ensinar a linguagem de programação C++ de uma maneira fácil, descomplicada e acessível para todos.
-
 ### Desenvolvido Com
 
 - [Electron](https://www.electronjs.org/)
