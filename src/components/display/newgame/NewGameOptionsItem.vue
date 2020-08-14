@@ -2,16 +2,15 @@
   <article>
     <h1>{{ title }}</h1>
     <p align="center">{{ desc }}</p>
-    <primary-button :to="to" width-prop="50%">{{ buttonOwner }}</primary-button>
+    <button @click.prevent="toRouterOption">{{ buttonOwner }}</button>
   </article>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import PrimaryButton from "@/components/common/general/button/PrimaryButton.vue";
-@Component({
-  components: { PrimaryButton }
-})
+import { settingsModule } from "@/store/modules/settings-module";
+
+@Component
 export default class NewGameOptionsItem extends Vue {
   @Prop(String) readonly title: string;
   @Prop(String) readonly desc: string;
@@ -21,8 +20,9 @@ export default class NewGameOptionsItem extends Vue {
     return `Escolher ${this.title}`;
   }
 
-  public toRouterOption(to: string) {
-    this.$router.push(`/${to}`);
+  public toRouterOption() {
+    settingsModule.setModeGame(this.to === "caracterbuild" ? "proplayer" : "manager");
+    this.$router.push(`/${this.to}`);
   }
 }
 </script>
@@ -52,5 +52,14 @@ article p {
 
 article:hover {
   transform: translateY(-25px) translateX(25px);
+}
+
+button {
+  font-family: "Poppins Light";
+  background: var(--background-secondary);
+  color: white;
+  padding: var(--padding-1) var(--padding-2);
+  border: none;
+  cursor: pointer;
 }
 </style>

@@ -40,7 +40,7 @@ const createWindow = () => {
 
   win.setMenuBarVisibility(false);
 
-  win.maximize();
+  win.setFullScreen(true);
 
   win.webContents.on("did-finish-load", () => {
     // @ts-ignore

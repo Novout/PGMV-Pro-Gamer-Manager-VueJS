@@ -3,14 +3,24 @@ import { VuexModule, Module, Mutation } from "vuex-class-modules";
 @Module
 class SettingsModule extends VuexModule {
   windowMainResolution = ["maximize"];
+  modeGame = "";
 
   get getWindowMainResolution() {
     return this.windowMainResolution;
   }
 
+  get getModeGame() {
+    return this.modeGame;
+  }
+
   @Mutation
   setWindowMainResolution(windowMainResolution: Array<string>) {
     this.windowMainResolution = windowMainResolution;
+  }
+
+  @Mutation
+  setModeGame(modeGame: string) {
+    this.modeGame = modeGame;
   }
 
   /*

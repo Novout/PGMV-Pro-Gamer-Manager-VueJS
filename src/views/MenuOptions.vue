@@ -22,16 +22,16 @@
 import { Vue, Component, Watch } from "vue-property-decorator";
 import PrimarySelect from "@/components/common/general/select/PrimarySelect.vue";
 import { settingsOptionService } from "@/services/defines/settings.ts";
-import { remote } from "electron";
+import {BrowserWindow, remote} from "electron";
 import SecondaryButton from "@/components/common/general/button/SecondaryButton.vue";
 
 @Component({
-  components: {SecondaryButton, PrimarySelect }
+  components: { SecondaryButton, PrimarySelect }
 })
 export default class MenuOptions extends Vue {
   private windowResolution: string | undefined | null = "";
   private windowResolutionList = [""];
-  
+
   public routeBack() {
     this.$router.back();
   }
@@ -39,14 +39,14 @@ export default class MenuOptions extends Vue {
   mounted() {
     this.windowResolutionList = settingsOptionService.getOptions();
   }
-  
-  @Watch('windowResolution')
-  resolutionActivated() {
-    const window = remote.getCurrentWindow();
 
-    if(this.windowResolution === null) return;
-    
-    if(this.windowResolution === "FullScreen") {
+  @Watch("windowResolution")
+  resolutionActivated() {
+    const window: BrowserWindow = remote.getCurrentWindow();
+
+    if (this.windowResolution === null) return;
+
+    if (this.windowResolution === "FullScreen") {
       window!.setFullScreen(true);
     } else {
       const size = this.windowResolution!.replace(/\D+/g, " ").split(" ", 2);
@@ -85,9 +85,11 @@ main {
 main > section {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 50vw;
+  border: 1px solid var(--text-secondary);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
 }
 
 main > section > section {
@@ -98,7 +100,8 @@ main > section > section {
 
 section p {
   color: white;
-  font-size: 1.5rem;
+  font-family: "Raleway Medium";
+  font-size: 1.25rem;
   padding: var(--padding-2) 0;
 }
 

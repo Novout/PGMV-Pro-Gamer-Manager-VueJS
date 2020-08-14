@@ -1,5 +1,5 @@
 <template>
-  <button @click.prevent="toRouterOption()" :style="{ width: widthProp }">
+  <button @click.prevent="func()">
     <slot />
   </button>
 </template>
@@ -10,12 +10,7 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 @Component
 export default class PrimaryButton extends Vue {
   @Prop(String) readonly to: string;
-  @Prop(Function) readonly func: Function | undefined | null;
-  @Prop(String) readonly widthProp: string | undefined | null = "100%";
-
-  public toRouterOption(to: string) {
-    this.$router.push(`/${to}`);
-  }
+  @Prop(Function) readonly func: any;
 }
 </script>
 

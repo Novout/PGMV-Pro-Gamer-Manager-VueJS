@@ -1,0 +1,26 @@
+[controllerPlayer]
+name="" # Name / Nome
+year="" # Date of Birth / Data de Nascimento
+level=1 # Level general base / Level Base Geral
+classGameplay="" # Class FPS ["Awper", "EntryFragger", "Lurker", "Support", "Rifler"] / Classe FPS
+availableSkillPoints=0 # Skills points disponíveis
+[controllerPlayer.skillsPoints] # Playstyle / Estilo de Jogo
+AIM="" # Alvo
+Quickness="" # Rapidez
+Technique="" # Técnica
+Offensive="" # Ofensivo
+Defensive="" # Defensivo
+[controllerPlayer.skillsPoints] # Focus / Focos
+Communication="" # Comunicação
+Creativity="" # Criatividade
+Technique="" # Técnica
+Decisions="" # Decisões
+Teamwork="" # Trabalho em Equipe
+[controllerPlayer.skillsPoints] # Knowledge / Conhecimento
+Gamesense="" # Senso de Jogo
+Maps="" # Experiência em Mapas
+Sniper="" # Auto-Explicativo
+Utility="" # Utilidade
+EcoManagement="" # Gerenciador de Economia
+
+

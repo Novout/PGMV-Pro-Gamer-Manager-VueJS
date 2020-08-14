@@ -7,7 +7,7 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
 export default class SecondaryButton extends Vue {
-  @Prop(Function) readonly func: Function | null
+  @Prop(Function) readonly func: Function | null;
 }
 </script>
 
