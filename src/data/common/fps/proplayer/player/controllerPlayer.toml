@@ -5,22 +5,21 @@ level=1 # Level general base / Level Base Geral
 classGameplay="" # Class FPS ["Awper", "EntryFragger", "Lurker", "Support", "Rifler"] / Classe FPS
 availableSkillPoints=0 # Skills points disponíveis
 [controllerPlayer.skillsPoints] # Playstyle / Estilo de Jogo
-AIM="" # Alvo
-Quickness="" # Rapidez
-Technique="" # Técnica
-Offensive="" # Ofensivo
-Defensive="" # Defensivo
+AIM=0.0 # Alvo
+Quickness=0.0 # Rapidez
+Offensive=0.0 # Ofensivo
+Defensive=0.0 # Defensivo
 [controllerPlayer.skillsPoints] # Focus / Focos
-Communication="" # Comunicação
-Creativity="" # Criatividade
-Technique="" # Técnica
-Decisions="" # Decisões
-Teamwork="" # Trabalho em Equipe
+Communication=0.0 # Comunicação
+Creativity=0.0 # Criatividade
+Decisions=0.0 # Decisões
+Teamwork=0.0 # Trabalho em Equipe
 [controllerPlayer.skillsPoints] # Knowledge / Conhecimento
-Gamesense="" # Senso de Jogo
-Maps="" # Experiência em Mapas
-Sniper="" # Auto-Explicativo
-Utility="" # Utilidade
-EcoManagement="" # Gerenciador de Economia
+Gamesense=0.0 # Senso de Jogo
+Maps=0.0 # Experiência em Mapas
+Utility=0.0 # Utilidade
+EcoManagement=0.0 # Gerenciador de Economia
+[controllerPlayer.perks] # Perks List
+
 
 

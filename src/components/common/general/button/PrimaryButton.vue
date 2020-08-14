@@ -10,7 +10,7 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 @Component
 export default class PrimaryButton extends Vue {
   @Prop(String) readonly to: string;
-  @Prop(Function) readonly func: any;
+  @Prop(Function) readonly func: Function;
 }
 </script>
 
