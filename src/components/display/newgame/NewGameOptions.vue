@@ -13,9 +13,9 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-import NewGameOptionsItem from "@/components/display/newgame/NewGameOptionsItem";
+import NewGameOptionsItem from "@/components/display/newgame/NewGameOptionsItem.vue";
 @Component({
   components: { NewGameOptionsItem }
 })

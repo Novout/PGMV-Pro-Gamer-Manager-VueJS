@@ -35,6 +35,9 @@
       "scripthost"
     ]
   },
+  "files": [
+    "settings.ts"
+  ],
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
@@ -51,6 +54,8 @@
   "rules": {
     "no-unused-vars": "off",
     "@typescript-eslint/ban-ts-ignore": "off",
-    "@typescript-eslint/ban-ts-comment": "off"
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-var-requires": "off",
+    "@typescript-eslint/no-var-requires": "off"
   }
 }

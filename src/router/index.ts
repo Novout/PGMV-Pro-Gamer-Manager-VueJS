@@ -17,6 +17,12 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "newgame" */ "../views/NewGameDisplay.vue")
   },
   {
+    path: "/options",
+    name: "MenuOptions",
+    component: () =>
+      import(/* webpackChunkName: "options" */ "../views/MenuOptions.vue")
+  },
+  {
     path: "/404",
     component: () =>
       import(/* webpackChunkName: "error" */ "../views/Page404.vue")
