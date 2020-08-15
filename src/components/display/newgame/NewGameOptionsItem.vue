@@ -17,13 +17,14 @@ export default class NewGameOptionsItem extends Vue {
   @Prop(String) readonly to: string;
 
   get buttonOwner() {
-    return `Escolher ${this.title}`;
+    return `Criar ${this.title}`;
   }
 
   public toRouterOption() {
     settingsModule.setModeGame(
       this.to === "caracterbuild" ? "proplayer" : "manager"
     );
+    settingsModule.resetPlayerAccount();
     this.$router.push(`/${this.to}`);
   }
 }

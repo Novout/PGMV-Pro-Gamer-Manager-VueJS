@@ -3,7 +3,7 @@ import { ProPlayerSettings } from "./base/proplayer-abstract";
 import { ownerCharacterFPS, perks } from "./owner-character-i";
 
 @Module
-class ownerCharacterModule extends ProPlayerSettings {
+class OwnerCharacterFPSModule extends ProPlayerSettings {
   limitTrainingPoints = 2;
   perks: perks;
 
@@ -53,7 +53,7 @@ class ownerCharacterModule extends ProPlayerSettings {
 }
 
 import store from "../../../index";
-export const settingsModule = new ownerCharacterModule({
+export const ownerCharacterFPSModule = new OwnerCharacterFPSModule({
   store,
   name: "ownerFPSPlayer"
 });

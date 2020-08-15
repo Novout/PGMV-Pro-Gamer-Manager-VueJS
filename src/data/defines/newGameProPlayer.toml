@@ -1,0 +1,7 @@
+[defineTypeGameplay]
+A = ["A", "EntryFragger", "Lurker", "Support", "Rifler"]
+B = ["B", "EntryFragger", "Lurker", "Support", "Rifler"]
+C = ["C", "EntryFragger", "Lurker", "Support", "Rifler"]
+D = ["D", "EntryFragger", "Lurker", "Support", "Rifler"]
+FPS = ["Awper", "EntryFragger", "Lurker", "Support", "Rifler"]
+

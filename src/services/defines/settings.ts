@@ -1,9 +1,9 @@
 import { readFileSync } from "fs";
-import TOML from "@iarna/toml";
+import { parse } from "@iarna/toml";
 
 class SettingsOptionService {
   getOptions() {
-    const { options } = TOML.parse(
+    const { options } = parse(
       readFileSync("./src/data/defines/settings.toml", { encoding: "utf-8" })
     );
 

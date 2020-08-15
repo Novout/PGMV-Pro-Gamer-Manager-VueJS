@@ -3,6 +3,7 @@ import { VuexModule, Module, Mutation } from "vuex-class-modules";
 @Module
 class SettingsModule extends VuexModule {
   windowMainResolution = ["maximize"];
+  newPlayerAccount = 0;
   modeGame = "";
 
   get getWindowMainResolution() {
@@ -11,6 +12,25 @@ class SettingsModule extends VuexModule {
 
   get getModeGame() {
     return this.modeGame;
+  }
+
+  get getNewPlayerAccount() {
+    return this.modeGame;
+  }
+
+  @Mutation
+  setNewPlayerAccount() {
+    this.newPlayerAccount++;
+  }
+
+  @Mutation
+  resetPlayerAccount() {
+    this.newPlayerAccount = 0;
+  }
+
+  @Mutation
+  decreasePlayerAccount() {
+    this.newPlayerAccount--;
   }
 
   @Mutation

@@ -17,6 +17,14 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "newgame" */ "../views/NewGameDisplay.vue")
   },
   {
+    path: "/characterbuild",
+    name: "NewGameCharacterDisplay",
+    component: () =>
+      import(
+        /* webpackChunkName: "newgame" */ "../views/NewGameCharacterDisplay.vue"
+      )
+  },
+  {
     path: "/options",
     name: "MenuOptions",
     component: () =>

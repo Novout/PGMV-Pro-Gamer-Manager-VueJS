@@ -3,7 +3,7 @@
     <NewGameOptionsItem
       title="Jogador"
       desc="Se torne um Pro-Player e conquiste o mundo!"
-      to="caracterbuild"
+      to="characterbuild"
     />
     <NewGameOptionsItem
       title="Dono"

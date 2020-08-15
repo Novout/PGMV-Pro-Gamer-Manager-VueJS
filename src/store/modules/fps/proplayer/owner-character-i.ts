@@ -32,6 +32,7 @@ export default interface ownerCharacter {
   age: number;
   level: number;
   classGameplay: string;
+  typeGameplay: string;
   availableSkillPoints: number;
   trainingPoints: number;
   skillsPoints: skillsPoints;

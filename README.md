@@ -1,14 +1,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Novout/He4rt-CPP-Tutorial">
+  <a href="https://github.com/Novout/PGMV-Pro-Gamer-Manager-VueJS">
     <img src="src/assets/pgm.png" alt="PGM Logo" width="90%">
   </a>
 </p>
-
-## Sobre o Projeto
-
-Produzido com a colaboração de integrantes da **He4rt Developers**, esse tutorial tem como objetivo principal apresentar e ensinar a linguagem de programação C++ de uma maneira fácil, descomplicada e acessível para todos.
 
 ### Desenvolvido Com
 

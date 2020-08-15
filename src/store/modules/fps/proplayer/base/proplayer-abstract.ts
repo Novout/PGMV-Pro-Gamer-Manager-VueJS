@@ -7,6 +7,7 @@ export abstract class ProPlayerSettings extends VuexModule
   age: number;
   level = 1;
   classGameplay: string;
+  typeGameplay: string;
   availableSkillPoints = 0;
   trainingPoints = 0;
   skillsPoints: skillsPoints;
@@ -20,7 +21,8 @@ export abstract class ProPlayerSettings extends VuexModule
     classGameplay,
     availableSkillPoints,
     skillsPoints,
-    trainingPoints
+    trainingPoints,
+    typeGameplay
   }: ownerCharacter) {
     this.name = name;
     this.age = age;
@@ -29,6 +31,7 @@ export abstract class ProPlayerSettings extends VuexModule
     this.availableSkillPoints = availableSkillPoints;
     this.skillsPoints = skillsPoints;
     this.trainingPoints = trainingPoints;
+    this.typeGameplay = typeGameplay;
   }
 
   @Mutation
