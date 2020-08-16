@@ -40,12 +40,12 @@ const createWindow = () => {
 
   win.setMenuBarVisibility(false);
 
-  win.setFullScreen(true);
-
   win.webContents.on("did-finish-load", () => {
     // @ts-ignore
     win.setTitle("PGMJ - Pro Gamer Manager VueJS");
   });
+
+  win.setFullScreen(true);
 
   win.on("closed", () => {
     win = null;
