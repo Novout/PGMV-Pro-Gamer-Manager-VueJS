@@ -3,11 +3,14 @@ import { Mutation, VuexModule } from "vuex-class-modules";
 
 export abstract class ProPlayerSettings extends VuexModule
   implements ownerCharacter {
-  name: string;
-  age: number;
+  // @ts-ignore
+  name: string | undefined;
+  // @ts-ignore
+  age: number | undefined;
   level = 1;
   classGameplay: string;
-  typeGameplay: string;
+  // @ts-ignore
+  typeGameplay: string | undefined;
   availableSkillPoints = 0;
   trainingPoints = 0;
   skillsPoints: skillsPoints;

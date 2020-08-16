@@ -42,3 +42,9 @@ export interface ownerCharacterFPS extends ownerCharacter {
   limitTrainingPoints: number;
   perks: perks;
 }
+
+export interface ownerCharacterFPSInitial {
+  name: string | undefined;
+  age: number | undefined;
+  typeGameplay: string | undefined;
+}

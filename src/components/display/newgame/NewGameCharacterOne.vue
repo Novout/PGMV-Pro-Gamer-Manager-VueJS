@@ -52,6 +52,7 @@ import { Vue, Component, Watch } from "vue-property-decorator";
 import NewGameCharacterContainer from "@/components/display/newgame/NewGameCharacterContainer.vue";
 import { dataNewGameProPlayer } from "@/services/defines/newgame-proplayer";
 import { settingsModule } from "@/store/modules/settings-module";
+import { ownerCharacterFPSModule } from "@/store/modules/fps/proplayer/owner-character-fps-module";
 
 interface initialCharacterFormulary {
   name: string | undefined;
@@ -85,6 +86,13 @@ export default class NewGameCharacterOne extends Vue {
     this.characterFormulary.typeGameplay = typeGameplay;
   }
   public newPage() {
+    if (this.characterFormulary.classGameplay === "FPS") {
+      ownerCharacterFPSModule.setInitialFormulary({
+        name: this.characterFormulary.name,
+        age: this.characterFormulary.age,
+        typeGameplay: this.characterFormulary.typeGameplay
+      });
+    }
     settingsModule.setNewPlayerAccount();
   }
   public backPage() {

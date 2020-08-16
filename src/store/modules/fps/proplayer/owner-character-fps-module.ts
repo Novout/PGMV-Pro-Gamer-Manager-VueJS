@@ -1,11 +1,17 @@
 import { Module, Mutation } from "vuex-class-modules";
 import { ProPlayerSettings } from "./base/proplayer-abstract";
-import { ownerCharacterFPS, perks } from "./owner-character-i";
+import {
+  ownerCharacterFPS,
+  ownerCharacterFPSInitial,
+  perks
+} from "./owner-character-i";
 
 @Module
 class OwnerCharacterFPSModule extends ProPlayerSettings {
   limitTrainingPoints = 2;
   perks: perks;
+  // @ts-ignore
+  classGameplay: string | undefined = "FPS";
 
   @Mutation
   setPlayer({
@@ -28,6 +34,20 @@ class OwnerCharacterFPSModule extends ProPlayerSettings {
     this.trainingPoints = trainingPoints;
     this.limitTrainingPoints = limitTrainingPoints;
     this.perks = perks;
+  }
+
+  @Mutation
+  setInitialFormulary({ name, age, typeGameplay }: ownerCharacterFPSInitial) {
+    this.name = name;
+    this.age = age;
+    this.typeGameplay = typeGameplay;
+  }
+
+  @Mutation
+  setSecondaryFormulary({ name, age, typeGameplay }: ownerCharacterFPSInitial) {
+    this.name = name;
+    this.age = age;
+    this.typeGameplay = typeGameplay;
   }
 
   @Mutation
