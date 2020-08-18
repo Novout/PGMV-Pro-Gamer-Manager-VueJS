@@ -22,6 +22,8 @@ const createWindow = () => {
     height: 600,
     minHeight: 600,
     minWidth: 900,
+    maxHeight: 1500,
+    maxWidth: 2800,
     webPreferences: {
       enableRemoteModule: true,
       nodeIntegration: (process.env

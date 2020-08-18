@@ -31,11 +31,22 @@ button {
   cursor: pointer;
 }
 
+p {
+  font-family: "Poppins Light";
+  transition: all 0.2s ease;
+}
+
+p:hover {
+  color: #aaaaaa;
+}
+
 .button--white {
   color: white;
+  transition: all 0.25s ease;
 }
 
 .button--black {
   color: black;
+  transition: all 0.25s ease;
 }
 </style>

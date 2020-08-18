@@ -1,5 +1,5 @@
 <template>
-  <p>test</p>
+  <aside></aside>
 </template>
 
 <script>
@@ -9,4 +9,13 @@ import { Vue, Component } from "vue-property-decorator";
 export default class FPSProPlayerMainAside extends Vue {}
 </script>
 
-<style scoped></style>
+<style scoped>
+aside {
+  display: flex;
+  flex-flow: column nowrap;
+  place-content: center space-between;
+  height: 90vh;
+  width: 40vw;
+  background: var(--background-tertiary);
+}
+</style>
