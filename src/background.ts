@@ -1,18 +1,16 @@
 "use strict";
 
-require("dotenv").config();
-import { app, protocol, BrowserWindow, globalShortcut } from "electron";
+import { envService } from "./services/defines/env";
+import { app, protocol, BrowserWindow } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
+import { createShortcuts } from "./electron/shortcuts";
+
 // @ts-ignore
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
-import { readFileSync } from "fs";
-import { parse } from "@iarna/toml";
 
-const { PRODUCTION_MODE } = parse(
-  readFileSync("./env.toml", { encoding: "utf-8" })
-);
+const { PRODUCTION_MODE } = envService.getBaseEnv();
 
-let win: BrowserWindow | undefined | null;
+export let win: BrowserWindow | undefined | null;
 
 protocol.registerSchemesAsPrivileged([
   { scheme: "app", privileges: { secure: true, standard: true } }
@@ -42,7 +40,7 @@ const createWindow = () => {
 
   win.webContents.on("did-finish-load", () => {
     // @ts-ignore
-    win.setTitle("PGMJ - Pro Gamer Manager VueJS");
+    win.setTitle("PGMV - Pro Gamer Manager VueJS");
   });
 
   if (PRODUCTION_MODE) {
@@ -51,13 +49,6 @@ const createWindow = () => {
 
   win.on("closed", () => {
     win = null;
-  });
-};
-
-const createShortcuts = () => {
-  globalShortcut.register("CmdOrCtrl+D", () => {
-    // @ts-ignore
-    win.webContents.openDevTools();
   });
 };
 
