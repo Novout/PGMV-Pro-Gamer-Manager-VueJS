@@ -35,9 +35,6 @@
       "scripthost"
     ]
   },
-  "files": [
-    "settings.ts"
-  ],
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
@@ -49,7 +46,6 @@
   "exclude": [
     "node_modules",
     "src/store/**",
-    "src/background.ts"
   ],
   "rules": {
     "no-unused-vars": "off",

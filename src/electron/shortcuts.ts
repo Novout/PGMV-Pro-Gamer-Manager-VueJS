@@ -1,5 +1,5 @@
 import { globalShortcut } from "electron";
-import { win } from "@/background";
+import { win } from "./background";
 
 export const createShortcuts = () => {
   globalShortcut.register("CmdOrCtrl+D", () => {

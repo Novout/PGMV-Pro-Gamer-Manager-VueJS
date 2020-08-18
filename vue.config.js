@@ -8,8 +8,15 @@ module.exports = {
       builderOptions: {
         productName: "PGMJ"
       },
+      chainWebpackRendererProcess: config => {
+        config.plugin("define").tap(args => {
+          args[0]["IS_ELECTRON"] = true;
+          return args;
+        });
+      },
       disableMainProcessTypescript: false,
-      mainProcessTypeChecking: false
+      mainProcessTypeChecking: false,
+      mainProcessFile: "./src/electron/background.ts"
     }
   }
 };

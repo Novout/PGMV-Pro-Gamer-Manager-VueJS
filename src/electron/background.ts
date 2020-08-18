@@ -1,11 +1,9 @@
 "use strict";
 
-import { envService } from "./services/defines/env";
+import { envService } from "../services/defines/env";
 import { app, protocol, BrowserWindow } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
-import { createShortcuts } from "./electron/shortcuts";
-
-// @ts-ignore
+import { createShortcuts } from "./shortcuts";
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
 
 const { PRODUCTION_MODE } = envService.getBaseEnv();
