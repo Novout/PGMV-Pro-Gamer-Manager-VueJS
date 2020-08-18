@@ -12,6 +12,7 @@ class OwnerCharacterFPSModule extends ProPlayerSettings {
   perks: perks;
   // @ts-ignore
   classGameplay: string | undefined = "FPS";
+  typeGameplay: string | undefined = "Awper";
 
   @Mutation
   setPlayer({

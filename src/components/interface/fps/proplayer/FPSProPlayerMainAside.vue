@@ -1,13 +1,12 @@
 <template>
-  <p>A</p>
+  <p>test</p>
 </template>
 
 <script>
 import { Vue, Component } from "vue-property-decorator";
-// import { ownerModule } from "@/store/modules/owner-module";
 
 @Component
-export default class FPSMainHeader extends Vue {}
+export default class FPSProPlayerMainAside extends Vue {}
 </script>
 
 <style scoped></style>

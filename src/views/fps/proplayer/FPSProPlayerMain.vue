@@ -1,10 +1,15 @@
-<template><p>Hello</p></template>
+<template>
+  <main>
+    <FPSProPlayerMainHeader />
+  </main>
+</template>
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-// import { ownerModule } from "@/store/modules/owner-module";
-
-@Component
+import FPSProPlayerMainHeader from "@/components/interface/fps/proplayer/FPSProPlayerMainHeader.vue";
+@Component({
+  components: { FPSProPlayerMainHeader }
+})
 export default class FPSProPlayerMain extends Vue {}
 </script>
 

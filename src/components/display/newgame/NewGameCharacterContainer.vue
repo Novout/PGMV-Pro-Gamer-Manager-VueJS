@@ -27,7 +27,6 @@ export default class NewGameCharacterContainer extends Vue {}
   place-items: flex-start;
   padding: var(--padding-2);
   border: 2px solid var(--border-primary);
-  border-radius: var(--radius-default);
   margin: 0 auto;
   max-width: 40vw;
 }
