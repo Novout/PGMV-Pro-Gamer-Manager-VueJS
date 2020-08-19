@@ -1,34 +1,63 @@
+const InitialDisplay = () => ({
+  component: import(
+    /* webpackChunkName: "display" */ "../views/InitialDisplay.vue"
+  ),
+  loading: import(
+    /* webpackChunkName: "loading" */ "../components/loading/InitialDisplayLoading.vue"
+  ),
+  error: import(
+    /* webpackChunkName: "error" */ "../components/error/InitialDisplayError.vue"
+  ),
+  delay: 50,
+  timeout: 5000
+});
+
+const NewGameDisplay = () => ({
+  component: import(
+    /* webpackChunkName: "display" */ "../views/NewGameDisplay.vue"
+  )
+});
+
+const NewGameCharacterDisplay = () => ({
+  component: import(
+    /* webpackChunkName: "display" */ "../views/NewGameCharacterDisplay.vue"
+  )
+});
+
+const MenuOptions = () => ({
+  component: import(
+    /* webpackChunkName: "display" */ "../views/MenuOptions.vue"
+  )
+});
+
+const Page404 = () => ({
+  component: import(/* webpackChunkName: "display" */ "../views/Page404.vue")
+});
+
 export default [
   {
     path: "/",
     name: "InitialDisplay",
-    component: () =>
-      import(/* webpackChunkName: "initial" */ "../views/InitialDisplay.vue")
+    component: InitialDisplay
   },
   {
     path: "/newgame",
     name: "NewGameDisplay",
-    component: () =>
-      import(/* webpackChunkName: "newgame" */ "../views/NewGameDisplay.vue")
+    component: NewGameDisplay
   },
   {
     path: "/characterbuild",
     name: "NewGameCharacterDisplay",
-    component: () =>
-      import(
-        /* webpackChunkName: "newgame" */ "../views/NewGameCharacterDisplay.vue"
-      )
+    component: NewGameCharacterDisplay
   },
   {
     path: "/options",
     name: "MenuOptions",
-    component: () =>
-      import(/* webpackChunkName: "options" */ "../views/MenuOptions.vue")
+    component: MenuOptions
   },
   {
     path: "/404",
-    component: () =>
-      import(/* webpackChunkName: "error" */ "../views/Page404.vue")
+    component: Page404
   },
   { path: "*", redirect: "/404" }
 ];
