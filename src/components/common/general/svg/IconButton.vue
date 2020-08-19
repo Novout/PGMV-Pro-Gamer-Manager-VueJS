@@ -3,7 +3,7 @@
     :class="white ? 'button--white' : 'button--black'"
     @click="$router.push(`/${to}`)"
   >
-    <font-awesome-icon :icon="icon"></font-awesome-icon>
+    <font-awesome-icon :icon="icon" />
     <p>{{ name }}</p>
   </button>
 </template>

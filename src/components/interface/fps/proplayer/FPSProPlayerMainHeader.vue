@@ -7,20 +7,20 @@
         to="fpsproplayercalendary"
       />
       <icon-button
-        name="Configurações"
-        icon="cog"
-        to="fpsproplayerconfigurations"
-      />
-      <icon-button
         name="Ranking"
         icon="address-book"
         to="fpsproplayerranking"
       />
+      <icon-button name="Perfil" icon="id-badge" to="fpsproplayerprofile" />
     </section>
     <section>
       <p>Estilo: {{ getPlayerType }}</p>
       <p>Nível: {{ getPlayerLevel }}</p>
-      <icon-button name="Perfil" icon="id-badge" />
+      <icon-button
+        name="Configurações"
+        icon="cog"
+        to="fpsproplayerconfigurations"
+      />
     </section>
   </header>
 </template>

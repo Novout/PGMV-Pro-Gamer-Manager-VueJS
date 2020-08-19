@@ -4,7 +4,14 @@ import {
   faCalendarWeek,
   faCog,
   faAddressBook,
-  faIdBadge
+  faIdBadge,
+  faPodcast,
+  faSpinner,
+  faChartLine,
+  faChalkboardTeacher,
+  faBed,
+  faTasks,
+  faMountain
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -13,5 +20,12 @@ library.add(faCalendarWeek);
 library.add(faCog);
 library.add(faAddressBook);
 library.add(faIdBadge);
+library.add(faPodcast);
+library.add(faSpinner);
+library.add(faChartLine);
+library.add(faChalkboardTeacher);
+library.add(faBed);
+library.add(faTasks);
+library.add(faMountain);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
