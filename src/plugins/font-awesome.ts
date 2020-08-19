@@ -11,7 +11,9 @@ import {
   faChalkboardTeacher,
   faBed,
   faTasks,
-  faMountain
+  faMountain,
+  faUsers,
+  faStar
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -27,5 +29,7 @@ library.add(faChalkboardTeacher);
 library.add(faBed);
 library.add(faTasks);
 library.add(faMountain);
+library.add(faUsers);
+library.add(faStar);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

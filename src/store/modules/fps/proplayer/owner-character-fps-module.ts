@@ -13,6 +13,8 @@ class OwnerCharacterFPSModule extends ProPlayerSettings {
   // @ts-ignore
   classGameplay: string | undefined = "FPS";
   typeGameplay: string | undefined = "Awper";
+  inTeam = false;
+  teamName: string | undefined = undefined;
 
   @Mutation
   setPlayer({
@@ -49,6 +51,43 @@ class OwnerCharacterFPSModule extends ProPlayerSettings {
     this.name = name;
     this.age = age;
     this.typeGameplay = typeGameplay;
+    this.resetSkiilsPoints();
+  }
+
+  @Mutation
+  resetSkiilsPoints() {
+    this.skillsPoints = {
+      playstyle: {
+        aim: 1.0,
+        quickness: 1.0,
+        offensive: 1.0,
+        defensive: 1.0
+      },
+      focus: {
+        communication: 1.0,
+        creativity: 1.0,
+        decisions: 1.0,
+        teamwork: 1.0
+      },
+      knowledge: {
+        gamesense: 1.0,
+        maps: 1.0,
+        utility: 1.0,
+        ecoManagement: 1.0
+      }
+    };
+  }
+
+  @Mutation
+  setTeam(teamName: string) {
+    this.inTeam = true;
+    this.teamName = teamName;
+  }
+
+  @Mutation
+  leaveTeam() {
+    this.inTeam = false;
+    this.teamName = undefined;
   }
 
   @Mutation

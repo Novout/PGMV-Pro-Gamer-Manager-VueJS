@@ -6,21 +6,17 @@
         icon="calendar-week"
         to="fpsproplayercalendary"
       />
-      <icon-button
-        name="Ranking"
-        icon="address-book"
-        to="fpsproplayerranking"
-      />
+      <icon-button name="Ranking" icon="users" to="fpsproplayerranking" />
       <icon-button name="Perfil" icon="id-badge" to="fpsproplayerprofile" />
+      <icon-button
+        name="Time"
+        icon="star"
+        to="fpsproplayerteam"
+        v-if="getInTeam"
+      />
     </section>
     <section>
-      <p>Estilo: {{ getPlayerType }}</p>
-      <p>Nível: {{ getPlayerLevel }}</p>
-      <icon-button
-        name="Configurações"
-        icon="cog"
-        to="fpsproplayerconfigurations"
-      />
+      <icon-button name="Configurações" icon="cog" to="options" />
     </section>
   </header>
 </template>
@@ -29,15 +25,13 @@
 import { Vue, Component } from "vue-property-decorator";
 import IconButton from "@/components/common/general/svg/IconButton";
 import { ownerCharacterFPSModule } from "@/store/modules/fps/proplayer/owner-character-fps-module";
+
 @Component({
   components: { IconButton }
 })
 export default class FPSProPlayerMainHeader extends Vue {
-  get getPlayerLevel() {
-    return ownerCharacterFPSModule.level;
-  }
-  get getPlayerType() {
-    return ownerCharacterFPSModule.typeGameplay;
+  get getInTeam() {
+    return ownerCharacterFPSModule.inTeam;
   }
 }
 </script>
