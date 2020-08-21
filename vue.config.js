@@ -5,8 +5,10 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       nodeIntegration: true,
+      publish: ["github"],
       builderOptions: {
-        productName: "PGMJ"
+        productName: "PGMJ",
+        files: ["dist_electron/**/*"]
       },
       chainWebpackRendererProcess: config => {
         config.plugin("define").tap(args => {
@@ -16,7 +18,7 @@ module.exports = {
       },
       disableMainProcessTypescript: false,
       mainProcessTypeChecking: false,
-      mainProcessFile: "./src/electron/background.ts"
+      mainProcessFile: "src/electron/background.ts"
     }
   }
 };

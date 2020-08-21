@@ -3,6 +3,7 @@
 import { envService } from "../services/defines/env";
 import { app, protocol, BrowserWindow } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
+import { autoUpdater } from "electron-updater";
 import { createShortcuts } from "./shortcuts";
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
 
@@ -34,6 +35,7 @@ const createWindow = () => {
   } else {
     createProtocol("app");
     win.loadURL("app://./index.html");
+    autoUpdater.checkForUpdatesAndNotify();
   }
 
   win.setMenuBarVisibility(false);
