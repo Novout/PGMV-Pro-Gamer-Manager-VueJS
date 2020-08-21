@@ -1,13 +1,14 @@
 import { Module, Mutation } from "vuex-class-modules";
-import { ProPlayerSettings } from "./base/proplayer-abstract";
+import { ProPlayerFPSSettings } from "./base/proplayer-abstract";
 import {
   ownerCharacterFPS,
   ownerCharacterFPSInitial,
-  perks
+  perks,
+  perkSlot
 } from "./owner-character-i";
 
 @Module
-class OwnerCharacterFPSModule extends ProPlayerSettings {
+class OwnerCharacterFPSModule extends ProPlayerFPSSettings {
   limitTrainingPoints = 2;
   perks: perks;
   // @ts-ignore
@@ -15,6 +16,24 @@ class OwnerCharacterFPSModule extends ProPlayerSettings {
   typeGameplay: string | undefined = "Awper";
   inTeam = false;
   teamName: string | undefined = undefined;
+  perksSlot: Array<perkSlot> = [
+    {
+      name: "",
+      active: false
+    },
+    {
+      name: "",
+      active: false
+    },
+    {
+      name: "",
+      active: false
+    },
+    {
+      name: "",
+      active: false
+    }
+  ];
 
   @Mutation
   setPlayer({

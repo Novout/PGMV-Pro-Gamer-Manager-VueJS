@@ -1,18 +1,18 @@
-interface playstyle {
+export interface playstyle {
   aim?: number;
   quickness?: number;
   offensive?: number;
   defensive?: number;
 }
 
-interface focus {
+export interface focus {
   communication?: number;
   creativity?: number;
   decisions?: number;
   teamwork?: number;
 }
 
-interface knowledge {
+export interface knowledge {
   gamesense?: number;
   maps?: number;
   utility?: number;
@@ -27,6 +27,23 @@ export interface skillsPoints {
 
 export interface perks {}
 
+export interface perkSlot {
+  name: string;
+  active: boolean;
+}
+
+export interface ownerCharacterFPS extends ownerCharacter {
+  limitTrainingPoints: number;
+  perks: perks;
+  perksSlot: [perkSlot, perkSlot, perkSlot, perkSlot];
+}
+
+export interface ownerCharacterFPSInitial {
+  name: string | undefined;
+  age: number | undefined;
+  typeGameplay: string | undefined;
+}
+
 export default interface ownerCharacter {
   name: string;
   age: number;
@@ -36,15 +53,4 @@ export default interface ownerCharacter {
   availableSkillPoints: number;
   trainingPoints: number;
   skillsPoints: skillsPoints;
-}
-
-export interface ownerCharacterFPS extends ownerCharacter {
-  limitTrainingPoints: number;
-  perks: perks;
-}
-
-export interface ownerCharacterFPSInitial {
-  name: string | undefined;
-  age: number | undefined;
-  typeGameplay: string | undefined;
 }
