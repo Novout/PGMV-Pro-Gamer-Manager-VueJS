@@ -19,7 +19,7 @@ interface knowledge {
   ecoManagement?: number;
 }
 
-export interface skillsPoints {
+interface skillsPoints {
   playstyle: playstyle;
   focus: focus;
   knowledge: knowledge;

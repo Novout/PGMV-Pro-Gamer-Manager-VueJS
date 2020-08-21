@@ -3,10 +3,10 @@ const InitialDisplay = () => ({
     /* webpackChunkName: "display" */ "../views/InitialDisplay.vue"
   ),
   loading: import(
-    /* webpackChunkName: "loading" */ "../components/loading/InitialDisplayLoading.vue"
+    /* webpackChunkName: "loading" */ "../components/loading/DisplayLoading.vue"
   ),
   error: import(
-    /* webpackChunkName: "error" */ "../components/error/InitialDisplayError.vue"
+    /* webpackChunkName: "error" */ "../components/error/DisplayError.vue"
   ),
   delay: 50,
   timeout: 5000
