@@ -17,3 +17,19 @@ export abstract class TeamFPSSettings extends VuexModule implements TeamFPS {
     captainName: "";
   };
 }
+
+export class TeamFPSSettingsInst implements TeamFPS {
+  name = "";
+  level = 1;
+  members: Array<characterFPS> = [];
+  coach = "";
+  bestMap = "";
+  worstMap = "";
+  status: {
+    rating: 0.0;
+    totalGames: 0;
+    totalWins: 0;
+    totalLoses: 0;
+    captainName: "";
+  };
+}

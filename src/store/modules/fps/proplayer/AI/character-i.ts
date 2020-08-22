@@ -36,3 +36,11 @@ export default interface character {
 }
 
 export interface characterFPS extends character {}
+
+export class characterFPSInst implements characterFPS {
+  name: string;
+  age: number;
+  level: number;
+  typeGameplay: string;
+  skillsPoints: skillsPoints;
+}
