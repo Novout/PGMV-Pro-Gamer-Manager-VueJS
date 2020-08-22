@@ -1,11 +1,24 @@
 import { characterFPS } from "./character-i";
-import { skillsPoints } from "../owner-character-i";
 import { Mutation } from "vuex";
+
+interface status {
+  rating: number;
+  totalGames: number;
+  totalWins: number;
+  totalLoses: number;
+  captainName: string;
+}
 
 export interface TeamFPS {
   name: string;
   level: number;
   members: Array<characterFPS>;
-  skillsPoints: skillsPoints;
-  setTeam: Mutation<any>;
+  coach: string;
+  bestMap: string;
+  worstMap: string;
+  status: status;
+  setTeam?: Mutation<any>;
+  setLevel?: Mutation<any>;
+  removeMember?: Mutation<any>;
+  addMember?: Mutation<any>;
 }
