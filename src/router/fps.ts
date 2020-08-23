@@ -4,10 +4,21 @@ const FPSProPlayerMain = () => ({
   )
 });
 
+const FPSProPlayerRanked = () => ({
+  component: import(
+    /* webpackChunkName: "fps" */ "../views/fps/proplayer/FPSProPlayerRanked.vue"
+  )
+});
+
 export default [
   {
-    path: "/fpsproplayer",
+    path: "/fpsproplayerranked",
     name: "FPSProPlayerMain",
+    component: FPSProPlayerRanked
+  },
+  {
+    path: "/fpsproplayer",
+    name: "FPSProPlayerRanked",
     component: FPSProPlayerMain
   }
 ];

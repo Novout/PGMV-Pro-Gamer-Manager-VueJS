@@ -9,6 +9,8 @@ import {
 
 @Module
 class OwnerCharacterFPSModule extends ProPlayerFPSSettings {
+  name = "";
+  age = 0;
   limitTrainingPoints = 2;
   perks: perks;
   // @ts-ignore

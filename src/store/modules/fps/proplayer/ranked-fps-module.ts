@@ -1,16 +1,18 @@
 import { VuexModule, Module, Mutation } from "vuex-class-modules";
 import { TeamFPS } from "./AI/team-i";
 import { rankedService } from "../../../../services/fps/proplayer/ranked";
-import { TeamFPSSettingsInst } from "./AI/team-abstract";
 import { ownerCharacterFPSModule } from "./owner-character-fps-module";
 import { characterFPSInst } from "./AI/character-i";
 
 @Module
 class RankedFPSModule extends VuexModule {
-  myTeam: TeamFPS;
-  enemyTeam: TeamFPS;
+  myTeam: TeamFPS = this.createMyTeam();
+  enemyTeam: TeamFPS = this.createEnemyTeam();
   isActive = false;
-  round: 1;
+  round = 1;
+  roundTime = "00:00";
+  roundTimeCount = 0;
+  roundList = [];
   createNPCPlayer() {
     const playerInst = new characterFPSInst();
     playerInst.name = rankedService.getRandomPlayerName();
@@ -27,80 +29,80 @@ class RankedFPSModule extends VuexModule {
 
     return playerInst;
   }
-  @Mutation
   createMyTeam() {
-    const myTeamInst: TeamFPS = new TeamFPSSettingsInst();
-    myTeamInst.name = rankedService.getRandomTeamName();
-    myTeamInst.bestMap = "RANDOM";
-    myTeamInst.worstMap = "RANDOM";
-    myTeamInst.coach = rankedService.getRandomPlayerName();
-
     const ownerLevel = ownerCharacterFPSModule.level;
     const randomLevel = Math.floor(
-      Math.random() * (ownerLevel + 1) + (ownerLevel - 1)
+      Math.random() * (ownerLevel + 2) + ownerLevel
     );
-    myTeamInst.level = randomLevel;
-
-    myTeamInst.status = {
-      rating: 1.0,
-      totalGames: 10,
-      totalWins: 6,
-      totalLoses: 4,
-      captainName:
-        myTeamInst.members[
-          Math.floor(Math.random() * myTeamInst.members.length)
-        ].name
+    const myTeam = {
+      name: rankedService.getRandomTeamName(),
+      bestMap: "RANDOM",
+      worstMap: "RANDOM",
+      coach: rankedService.getRandomPlayerName(),
+      level: randomLevel,
+      members: [
+        this.createNPCPlayer(),
+        this.createNPCPlayer(),
+        this.createNPCPlayer(),
+        this.createNPCPlayer()
+      ],
+      status: {
+        rating: 1.0,
+        totalGames: 10,
+        totalWins: 6,
+        totalLoses: 4,
+        captainName: "TEST"
+      }
     };
-    myTeamInst.members = [
-      this.createNPCPlayer(),
-      this.createNPCPlayer(),
-      this.createNPCPlayer(),
-      this.createNPCPlayer()
-    ];
 
-    this.myTeam = myTeamInst;
+    return myTeam;
   }
-  @Mutation
   createEnemyTeam() {
-    const enemyTeam: TeamFPS = new TeamFPSSettingsInst();
-    enemyTeam.name = rankedService.getRandomTeamName();
-    enemyTeam.bestMap = "RANDOM";
-    enemyTeam.worstMap = "RANDOM";
-    enemyTeam.coach = rankedService.getRandomPlayerName();
-
     const ownerLevel = ownerCharacterFPSModule.level;
     const randomLevel = Math.floor(
-      Math.random() * (ownerLevel + 1) + (ownerLevel - 1)
+      Math.random() * (ownerLevel + 2) + ownerLevel
     );
-    enemyTeam.level = randomLevel;
-
-    enemyTeam.status = {
-      rating: 1.0,
-      totalGames: 10,
-      totalWins: 6,
-      totalLoses: 4,
-      captainName:
-        enemyTeam.members[Math.floor(Math.random() * enemyTeam.members.length)]
-          .name
+    const enemyTeam = {
+      name: rankedService.getRandomTeamName(),
+      bestMap: "RANDOM",
+      worstMap: "RANDOM",
+      coach: rankedService.getRandomPlayerName(),
+      level: randomLevel,
+      members: [
+        this.createNPCPlayer(),
+        this.createNPCPlayer(),
+        this.createNPCPlayer(),
+        this.createNPCPlayer(),
+        this.createNPCPlayer()
+      ],
+      status: {
+        rating: 1.0,
+        totalGames: 10,
+        totalWins: 6,
+        totalLoses: 4,
+        captainName: "TEST"
+      }
     };
-    enemyTeam.members = [
-      this.createNPCPlayer(),
-      this.createNPCPlayer(),
-      this.createNPCPlayer(),
-      this.createNPCPlayer(),
-      this.createNPCPlayer()
-    ];
 
-    this.enemyTeam = enemyTeam;
-  }
-  @Mutation
-  createTeams() {
-    this.createEnemyTeam();
-    this.createMyTeam();
+    return enemyTeam;
   }
   @Mutation
   startGame() {
-    this.createTeams();
+    console.log("A");
+  }
+  @Mutation
+  resetRankedTeams() {
+    this.myTeam = this.createMyTeam();
+    this.enemyTeam = this.createEnemyTeam();
+  }
+  @Mutation
+  newRound() {
+    this.round++;
+  }
+  @Mutation
+  setRoundTime() {
+    const position = this.roundTimeCount;
+    this.roundTime = this.roundList[position];
   }
 }
 
